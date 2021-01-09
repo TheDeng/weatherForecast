@@ -1,0 +1,70 @@
+module.exports={
+    devServer:{
+        open:true,
+        proxy:{
+            //城市定位
+            "/api":{
+                target:"http://apis.juhe.cn",
+                ws:true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/api':"http://apis.juhe.cn"
+                }
+            },
+            //天气不同，背景图片也不同
+            "/weather":{
+                target:"https://timgsa.baidu.com",
+                ws:true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/weather':"https://timgsa.baidu.com"
+                }
+            },
+            "/weathers":{
+                target:"https://image.baidu.com/search/detail",
+                ws:true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/weathers':"https://image.baidu.com/search/detail"
+                }
+            },
+            //获取新闻接口
+            "/news":{
+                target:"https://v.juhe.cn",
+                ws:true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/news':"https://v.juhe.cn"
+                }
+            },
+            //获取景点介绍
+            "/fires":{
+                target:"http://scenicspot.market.alicloudapi.com",
+                ws:true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/fires':"http://scenicspot.market.alicloudapi.com"
+                }
+            },
+            //获取百度语音token
+            "read":{
+                target:"https://openapi.baidu.com",
+                ws:true,
+                changeOrigin:true,
+                pathRewrite:{
+                    "^/read":"https://openapi.baidu.com"
+                }
+            },
+            //调取百度语音识别
+            "files":{
+                target:"http://vop.baidu.com/",
+                ws:true,
+                changeOrigin:true,
+                pathRewrite:{
+                    "^/files":"http://vop.baidu.com/"
+                }
+            },
+        }
+    }
+}
+

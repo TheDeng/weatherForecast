@@ -1,0 +1,3 @@
+[0309/144050.961:ERROR:settings.cc(320)] Settings magic is not 1129342067
+[0405/153926.257:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
+[0414/085704.754:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
